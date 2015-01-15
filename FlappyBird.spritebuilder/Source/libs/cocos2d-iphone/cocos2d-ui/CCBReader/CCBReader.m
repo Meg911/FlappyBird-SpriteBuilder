@@ -921,7 +921,14 @@ static inline float readFloat(CCBReader *self)
     }
     else
     {
-        NSAssert(false, @"[PROPERTY] %@ - Failed to read property type %d, node class name: \"%@\", name: \"%@\", in ccb file: \"%@\"", name, type, [node class], [node name], _currentCCBFile);
+        float f = readFloat(self);
+        bool enabled = readBool(self);
+        [node setValue:@(enabled) forKey:[NSString stringWithFormat:@"%@Enabled",name]];
+        if(enabled)
+        {
+            [node setValue:@(f) forKey:name];
+        }
+
     }
 }
 
