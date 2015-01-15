@@ -1,11 +1,11 @@
 #import "GamePlayScene.h"
-#import "Character.h"
+#import "Hero.h"
 #import "Obstacle.h"
 
 @implementation GamePlayScene
 
 - (void)initialize{
-    character = (Character*)[CCBReader load:@"Character"];
+    character = (Hero*)[CCBReader load:@"Character"];
     [physicsNode addChild:character];
     [self addObstacle];
     timeSinceObstacle = 0.0f;

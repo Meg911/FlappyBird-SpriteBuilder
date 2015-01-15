@@ -8,7 +8,7 @@
 
 #import "CCNode.h"
 
-@interface Character : CCSprite
+@interface Hero : CCSprite
 
 -(void) flap;
 

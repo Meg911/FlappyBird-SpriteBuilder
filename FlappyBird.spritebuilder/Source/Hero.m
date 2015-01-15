@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "Character.h"
+#import "Hero.h"
 #import "GamePlayScene.h"
 
-@implementation Character
+@implementation Hero
 
 - (void)didLoadFromCCB
 {
